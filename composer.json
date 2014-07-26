@@ -1,0 +1,7 @@
+{
+"require": {
+	"anahkiasen/rocketeer": "dev-master",
+        "cakephp/cakephp": "2.4.*",
+	"phpunit/phpunit": "3.7.*"
+      }
+}
