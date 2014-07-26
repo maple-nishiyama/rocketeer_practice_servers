@@ -27,8 +27,8 @@
 	// and store them locally
 	'connections' => array(
 		'production' => array(
-			'host'      => '',
-			'username'  => '',
+			'host'      => '192.168.33.12',
+			'username'  => 'vagrant',
 			'password'  => '',
 			'key'       => '/home/vagrant/.ssh/id_rsa',
 			'keyphrase' => '',

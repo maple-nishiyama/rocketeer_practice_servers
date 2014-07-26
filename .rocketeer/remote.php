@@ -31,7 +31,7 @@
 	////////////////////////////////////////////////////////////////////
 
 	// The root directory where your applications will be deployed
-	'root_directory'   => '/home/www/',
+	'root_directory'   => '/home/vagrant/',
 
 	// The folder the application will be cloned in
 	// Leave empty to use `application_name` as your folder name
@@ -41,8 +41,7 @@
 	// Use this to list folders that need to keep their state, like
 	// user uploaded data, file-based databases, etc.
 	'shared' => array(
-		'{path.storage}/logs',
-		'{path.storage}/sessions',
+		'app/tmp',
 	),
 
 	// Permissions
@@ -54,9 +53,7 @@
 		// You can pass paths in brackets, so {path.public} will return
 		// the correct path to the public folder
 		'files' => array(
-			'app/database/production.sqlite',
-			'{path.storage}',
-			'{path.public}',
+			'app/tmp',
 		),
 
 		// Here you can configure what actions will be executed to set
@@ -64,9 +61,9 @@
 		// a single command as a string or an array of commands
 		'callback' => function ($task, $file) {
 			return array(
-				sprintf('chmod -R 755 %s', $file),
+				sprintf('chmod -R 777 %s', $file),
 				sprintf('chmod -R g+s %s', $file),
-				sprintf('chown -R www-data:www-data %s', $file),
+				//sprintf('chown -R www-data:www-data %s', $file),
 			);
 		},
 
