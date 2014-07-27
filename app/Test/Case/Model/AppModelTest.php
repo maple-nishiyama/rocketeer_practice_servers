@@ -8,7 +8,7 @@ App::uses('AppModel', 'Model');
 class AppModelTest extends CakeTestCase {
 
 	public function testHogeHoge() {
-		$this->assertTrue(true);
+		$this->assertTrue(false);
 	}
 
 }
