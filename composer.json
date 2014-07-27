@@ -1,6 +1,7 @@
 {
 "require": {
 	"anahkiasen/rocketeer": "dev-master",
+        "illuminate/remote": "4.1.21",
         "cakephp/cakephp": "2.4.*",
 	"phpunit/phpunit": "3.7.*"
       }
